@@ -1,0 +1,25 @@
+
+
+var user =
+[
+	'firstdata' : 
+			{"user_id":"1", "user_name":"박성준", "device":"Android"},
+
+
+	'secondedata'	: 
+			{"user_id":"2", "user_name":"주용재", "device":"iOS"}
+];
+
+
+
+<% obj.first.forEach(function(a) {%>
+  <p> <%=a.a%> <%= a.user_id %> </p>
+  <p><%=a.b%><%= a.user_name %></p>
+  <p><%=a.c%> <%= a.device %></p>
+
+<%}); %>
+
+
+<p> user id : <%=obj.first.user_id %></p>
+<p> user name : <%=obj.first.user_name %></p>
+<p> device : <%=obj.first.device%></p>
