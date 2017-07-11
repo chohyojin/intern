@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery를 이용한 JSON 데이터 구하기</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+
+    <script>
+	$(document).ready(function() {
+	    $.getJSON("user.json", function(data) {
+
+        var words = [];
+        console.log(data);
+        $.each(data, function(key, value){
+          words.push(value);
+        });
+        var wordsStr = words.join();
+          $('#sbody').html(wordsStr);
+
+      });
+    });
+
+
+    </script>
+    <body>
+      <p>ㄴㄴㄴ </p>
+      <div id="sbody">
+      </div>
+
+    </body>
+
+  </html>
