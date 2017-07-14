@@ -1,53 +1,19 @@
 <html>
+  
   <head>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='/javascripts/script.js'></script>
+  
   </head>
+  
   <body>
-  	<br>
+  	<br><br><br>
     <input type="text" id="msg" />
-    <input type="button" id="ajax_test" value="search" />
-    <br>
-    <br>
-    <br>
+    <input type="button" id="ajax_test" value="search" onclick="clickbtn();"/>
+    <br><br><br>
+        
     <div id="result"></div>
     
-
-
-
-    <script>
-    
-      $('#ajax_test').click( function() {
-      	 
-          $('#result').html('');
-          
-          $.ajax({
-              url: 'http://localhost:3000/ajax',
-              dataType: 'json',
-              type: 'POST',
-              data: {'msg':$('#msg').val()},
-              success: function(result) {
-              	
-                if(result['result'] == false){
-              		  $('#result').html("디비에 없습니다");
-              		  console.log("no Data");
-					  
-			          }
-				        else {
-					          console.log(result);
-                    var data = result;        		 
-                      
-					          $('#result').html("user_id : " + data.user_id + '<br>' + " user_name : " + data.user_name + '<br>'+ " device : " + data.device);
-			         	}
-					 
-
-                  
-              }
-        });
-      })
-    </script>
-
-
-
   </body>
 </html>
