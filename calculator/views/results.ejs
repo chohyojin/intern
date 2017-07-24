@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-		<title> Finance Calculator v1.3 </title>
+		<title> Finance Calculator v1.6 </title>
 		<script src = 'http://code.jquery.com/jquery-latest.js'></script>
 		<style>
 			body {  
 				background-color : linen;
-			}
-			h1 {
 				text-align : center;
 			}
-			h2 {
-				text-align : center;
-			}
-			h4 {
+			h3 {
 				text-align: right;
 			}
-
 		</style>
 		</head>
 
 		<body>
-			<h1><font color = "pink">  #이사님 결과입니다#  </font></h1>
+			<br><br>
+			<h1><font color = "blue"> <%=year_filename%>.<%=month_filename%> 결산</font></h1>
 			<br><br><br>
-			<h2> 총매출 : <%=total_sum%> 원 </h2><br>
-			<h2> 총비용 : <%=total_expense%> 원 </h2><br>
-			<h2> 해외총매출 : <%=foreign_sum%> 원 </h2><br>
-			<h2> 해외총비용 : <%=foreign_expense%> 원 </h2><br>
-			<h2> 예상부가세 : <%=expectation_vat%> 원 </h2><br>
-
+			<h1> 총매출 : <%=total_sum%> 원 </h1><br>
+			<h1> 총비용 : <%=total_expense%> 원 </h1><br>
+			<h1> 해외총매출 : <%=foreign_sum%> 원 </h1><br>
+			<h1> 해외총비용 : <%=foreign_expense%> 원 </h1><br>
+			<h1> 예상부가세 : <%=expectation_vat%> 원 </h1><br>
 		</body>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br>
 
 		<footer>
-		<h4> copyright@sungjune.park@isharingsoft.com </h4>
+		<h3> <font color = "pink"> copyright@sungjune.park@iSharingsoft.com </font></h3>
 		</footer>
 	</html>
