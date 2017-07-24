@@ -1,4 +1,3 @@
-
 	const fs = require('fs'); //파일 입출력
 	const csv = require('fast-csv'); //csv 파일 읽기위함
 	const express = require('express'); //node.js express 사용
@@ -18,7 +17,7 @@
 			res.render('upload', { //upload.ejs 파일 웹에 띄우기
 			});
 		});
-		app.listen(8000); //포트 8000
+		app.listen(8000);
 		console.log('server 8000 connection success');
 		console.log('iSharingSoft Calculator Start');
 
@@ -101,9 +100,10 @@
 						console.log("예상부가세 : " + expectation_vat);
 					});
 				}
-				setTimeout(function(){res.render('results' , {total_sum : total_sum.toLocaleString('en') , total_expense : total_expense.toLocaleString('en') , foreign_sum : foreign_sum.toLocaleString('en') , foreign_expense : foreign_expense.toLocaleString('en') , expectation_vat : expectation_vat.toLocaleString('en') , year_filename : year_filename , month_filename : month_filename});	} , 8000);				
-				setTimeout(function(){ total_sum = 0, total_expense = 0, foreign_sum = 0,foreign_expense = 0,expectation_vat = 0},10000);
-				});			
+				setTimeout(function(){res.render('results' , {total_sum : total_sum.toLocaleString('en') , total_expense : total_expense.toLocaleString('en') , foreign_sum : foreign_sum.toLocaleString('en') , foreign_expense : foreign_expense.toLocaleString('en') , expectation_vat : expectation_vat.toLocaleString('en') , year_filename : year_filename , month_filename : month_filename});} , 9500);				
+				setTimeout(function(){total_sum = 0 , total_expense = 0 , foreign_sum = 0 , foreign_expense = 0 , expectation_vat = 0} ,11000);
+				
+			});			
 		});
 	}
 	
